@@ -19,4 +19,4 @@ export class Kata {
 
 // static is a method which belongs to the class itself
 // when do we need to create an object (instance)?
-// when we have a class that represents something with state(data) and behaviorcommit
+// when we have a class that represents something with state(data) and behavior
