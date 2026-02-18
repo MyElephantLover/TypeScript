@@ -117,4 +117,30 @@ const {
 console.log(otherHobbies);
 
 
+const notes = [
+    {
+        title: 'Meeting Notes',
+        content: 'Discuss project roadmap',
+        isPinned: true
+    },
+    {
+        title: 'Grocery List', content: 'Buy milk, eggs, bread', isPinned: fales
+    },
+    {
+        title: 'Workout Plan',
+        content: 'Push day: Bench, Shoulder Press ',
+        isPinned: false
+    },
+    {
+        title: 'Recipe Ideas', content: 'Pasta, Salad, Tacos', isPinned: false
+    },
+];
+
+const noteTitles = notes.map((note) => note.title);
+
+console.log(noteTitles);
+
+
+
+
 
