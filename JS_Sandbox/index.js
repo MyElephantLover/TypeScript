@@ -95,74 +95,87 @@
 
 // console.log(noteText);
 
-const IsLoggedIn = false;
+// const IsLoggedIn = false;
 
-function showWelcome() {
-    return IsLoggedIn && 'Welcome, User';
-}
+// function showWelcome() {
+//     return IsLoggedIn && 'Welcome, User';
+// }
 
-console.log(showWelcome());
+// console.log(showWelcome());
+
+// const user = {
+//     name: 'Ben',
+//     address: {city: 'Boston', state: 'MA'}, 
+//     hobbies: ['Movie', 'Sports', 'Music']
+// };
+
+// const {
+//     name,
+//     hobbies:[firstHobby, ...otherHobbies]
+// } = user;
+
+// console.log(otherHobbies);
+
+
+// const notes = [
+//     {
+//         title: 'Meeting Notes',
+//         content: 'Discuss project roadmap',
+//         isPinned: true
+//     },
+//     {
+//         title: 'Grocery List', content: 'Buy milk, eggs, bread', isPinned: false
+//     },
+//     {
+//         title: 'Workout Plan',
+//         content: 'Push day: Bench, Shoulder Press ',
+//         isPinned: false
+//     },
+//     {
+//         title: 'Recipe Ideas', content: 'Pasta, Salad, Tacos', isPinned: false
+//     },
+// ];
+
+// const noteTitles = notes.map((note, index) => `${index + 1}.${note.title}`);
+
+// console.log(noteTitles);
+
+
+// const pinnedNote = notes
+// .filter((note) => note.isPinned)
+// .map((note) => note.title);
+// console.log(pinnedNote);
+
+// const numbers = [1,2,3,4,5];
+
+// const sum = numbers.reduce((total, number) => total + number, 0);
+
+// console.log(sum);
+
+
+// totalCharacters = notes.reduce((total, note) => total + note.content.length, 0);
+
+// console.log(totalCharacters);
+
+
+// // total is an accumulator
+
+// notes.forEach((note) => console.log(note.title));
+
+// // just run some iteration on each items on an array; does not store it out
+
 
 const user = {
-    name: 'Ben',
-    address: {city: 'Boston', state: 'MA'}, 
-    hobbies: ['Movie', 'Sports', 'Music']
+    name: 'Brad',
 };
 
-const {
-    name,
-    hobbies:[firstHobby, ...otherHobbies]
-} = user;
+console.log(user.address?.city);
 
-console.log(otherHobbies);
+let value = 0;
+let result = value ?? 'Default Value'; // if the value is faulsy, it does not return 'Default Value'
+// using '||' returns 'Default Value' is value is faulsy
 
-
-const notes = [
-    {
-        title: 'Meeting Notes',
-        content: 'Discuss project roadmap',
-        isPinned: true
-    },
-    {
-        title: 'Grocery List', content: 'Buy milk, eggs, bread', isPinned: false
-    },
-    {
-        title: 'Workout Plan',
-        content: 'Push day: Bench, Shoulder Press ',
-        isPinned: false
-    },
-    {
-        title: 'Recipe Ideas', content: 'Pasta, Salad, Tacos', isPinned: false
-    },
-];
-
-const noteTitles = notes.map((note, index) => `${index + 1}.${note.title}`);
-
-console.log(noteTitles);
-
-
-const pinnedNote = notes
-.filter((note) => note.isPinned)
-.map((note) => note.title);
-console.log(pinnedNote);
-
-const numbers = [1,2,3,4,5];
-
-const sum = numbers.reduce((total, number) => total + number, 0);
-
-console.log(sum);
-
-
-totalCharacters = notes.reduce((total, note) => total + note.content.length, 0);
-
-console.log(totalCharacters);
-
-
-// total is an accumulator
-
-notes.forEach((note) => console.log(note.title));
-
-// just run some iteration on each items on an array; does not store it out
+console.log(result);
 
 
 
