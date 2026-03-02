@@ -193,6 +193,21 @@ const newNotes = notes.map((note) =>
 console.log(newNotes);
 console.log(notes);
 
+const User = {
+    name: 'John Doe',
+    age: 30
+};
+
+const NewUser = {
+    ...User,
+    age: 35
+};
+
+console.log(User);
+console.log(NewUser);
+
+
+
 
 
 
