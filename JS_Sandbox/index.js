@@ -124,7 +124,7 @@ const notes = [
         isPinned: true
     },
     {
-        title: 'Grocery List', content: 'Buy milk, eggs, bread', isPinned: fales
+        title: 'Grocery List', content: 'Buy milk, eggs, bread', isPinned: false
     },
     {
         title: 'Workout Plan',
@@ -136,9 +136,35 @@ const notes = [
     },
 ];
 
-const noteTitles = notes.map((note) => note.title);
+const noteTitles = notes.map((note, index) => `${index + 1}.${note.title}`);
 
 console.log(noteTitles);
+
+
+const pinnedNote = notes
+.filter((note) => note.isPinned)
+.map((note) => note.title);
+console.log(pinnedNote);
+
+const numbers = [1,2,3,4,5];
+
+const sum = numbers.reduce((total, number) => total + number, 0);
+
+console.log(sum);
+
+
+totalCharacters = notes.reduce((total, note) => total + note.content.length, 0);
+
+console.log(totalCharacters);
+
+
+// total is an accumulator
+
+notes.forEach((note) => console.log(note.title));
+
+// just run some iteration on each items on an array; does not store it out
+
+
 
 
 
