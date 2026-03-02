@@ -181,6 +181,13 @@ let result = value ?? 'Default Value'; // if the value is faulsy, it does not re
 
 console.log(user.address?.city?? 'Unknown');
 
+const notes = ['Meeting Note', 'Grocery List'];
+const newNotes = [...notes, 'Workout Plan'];
+console.log(notes);
+console.log(newNotes);
+
+
+
 
 
 
