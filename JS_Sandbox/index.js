@@ -171,11 +171,15 @@ const user = {
 
 console.log(user.address?.city);
 
+// 'address?' is optional chaining
+
 let value = 0;
 let result = value ?? 'Default Value'; // if the value is faulsy, it does not return 'Default Value'
 // using '||' returns 'Default Value' is value is faulsy
 
-console.log(result);
+// console.log(result);
+
+console.log(user.address?.city?? 'Unknown');
 
 
 
