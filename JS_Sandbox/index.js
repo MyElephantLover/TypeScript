@@ -174,7 +174,7 @@ console.log(user.address?.city);
 // 'address?' is optional chaining
 
 let value = 0;
-let result = value ?? 'Default Value'; 
+let result = value ?? 'Default Value'; // 0 is not null or undefined, so result will be 0
 // using '||' checks faulsy values
 // using '??' checks nullish values (null or undefined)
 // 0 is falsy, but it is not nullish, so result will be 0, not 'Default Value'
@@ -207,6 +207,70 @@ const NewUser = {
 
 console.log(User);
 console.log(NewUser);
+
+
+// In JS, a promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows you to write asynchronous code in a more synchronous and readable manner, avoiding callback hell. 
+// A promise can be in one of three states: pending, fulfilled, or rejected. You can use .then() to handle the fulfilled state and .catch() to handle the rejected state.
+
+// const myPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('Promise resolved successfully!');
+//     }, 2000); // the amount of time we want to wait before the promise is resolved, in milliseconds = 2 seconds
+// });
+
+// all we did was to create a promise that will resolve after 2 seconds with the message 'Promise resolved successfully!'
+
+// myPromise.then((message) => { // .then() is used to handle the fulfilled state of the promise, and it takes a callback function that receives the resolved value (in this case, 'message') as an argument
+//     console.log(message); // this will log 'Promise resolved successfully!' after 2 seconds
+// }).catch((error) => { // .catch() is used to handle the rejected state of the promise, and it takes a callback function that receives the error as an argument
+//     console.error('Promise rejected:', error);
+// });
+
+
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('Promise rejected!');
+    }, 2000); // the amount of time we want to wait before the promise is resolved, in milliseconds = 2 seconds
+});
+
+myPromise.then((message) => {
+    console.log(message);
+}) .catch((error) => {
+    console.error('Promise rejected:', error);
+});
+
+// Now we are using a fetch API to make an HTTP request to a public API that returns a random joke. 
+// The fetch() function returns a promise that resolves to the response of the request. 
+// We then use .then() to handle the response and extract the JSON data, and another .then() to log the joke to the console. 
+// If there is an error during the fetch operation, we catch it with .catch() and log the error message.
+
+fetch('https://official-joke-api.appspot.com/random_joke')
+    .then((response) => response.json()) // this will parse the response as JSON
+    .then((data) => {
+        console.log(`Here's a joke for you: ${data.setup} - ${data.punchline}`);
+    }) // this will log the joke to the console
+    .catch((error) => {
+        console.error('Error fetching joke:', error);
+    }); 
+
+const fetchData = async () => { // the same thing as async function fetchData() {
+    try {
+        const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+        const data = await response.json(); // parsing the response as JSON
+        console.log(`Here's a joke for you: ${data.setup} - ${data.punchline}`);
+    } catch (error) {
+        console.error('Error fetching joke:', error);
+    }
+
+};
+
+fetchData();
+
+
+// { key } means we are destructuring the object and getting the value of the key property.
+// { parent : {child} } means we are destructuring the parent object and getting the value of the child property.
+
+
 
 
 
