@@ -174,8 +174,10 @@ console.log(user.address?.city);
 // 'address?' is optional chaining
 
 let value = 0;
-let result = value ?? 'Default Value'; // if the value is faulsy, it does not return 'Default Value'
-// using '||' returns 'Default Value' is value is faulsy
+let result = value ?? 'Default Value'; 
+// using '||' checks faulsy values
+// using '??' checks nullish values (null or undefined)
+// 0 is falsy, but it is not nullish, so result will be 0, not 'Default Value'
 
 // console.log(result);
 
